@@ -11,14 +11,20 @@
 <body ng-controller="MovieController" class="ng-cloak">
 <!-- sample angular code -->
 <div class="container">
+    <h1>Angular OMDb API Search</h1>
     <div>
-        <form name="movieSearch">
+        <form name="movieSearchForm" ng-submit="movieSearch(search.title)">
             <div class="row">
                 <div class="six columns">
                     <label for="movieSearchInput">Enter a movie title</label>
-                    <input class="u-full-width" type="text" placeholder="Sharknado" id="movieSearchInput">
+                    <input class="u-full-width"
+                           type="text"
+                           placeholder="Sharknado"
+                           ng-model="search.title"
+                           id="movieSearchInput">
                 </div>
             </div>
+            <input type="submit" value="submit input">
         </form>
         <p>{{ greeting }}</p>
     </div>
