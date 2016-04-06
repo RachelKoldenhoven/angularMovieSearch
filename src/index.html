@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='MovieApp'>
+<head>
+    <meta charset="utf-8">
+    <title>Angular Movie App</title>
+    <link href="css/normalize.css" rel="stylesheet" media="screen">
+    <link href="css/skeleton.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <base href="/">
+</head>
+<body ng-controller="MovieController" class="ng-cloak">
+<!-- sample angular code -->
+<div class="container">
+    <div>
+        <form name="movieSearch">
+            <div class="row">
+                <div class="six columns">
+                    <label for="movieSearchInput">Enter a movie title</label>
+                    <input class="u-full-width" type="text" placeholder="Sharknado" id="movieSearchInput">
+                </div>
+            </div>
+        </form>
+        <p>{{ greeting }}</p>
+    </div>
+</div>
+<div ng-view></div>
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular-route.min.js"></scrip
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+<script src="js/controllers.js" type="text/javascript"></script>
+<script src="js/directives.js" type="text/javascript"></script>
+<script src="js/filters.js" type="text/javascript"></script>
+<script src="js/services.js" type="text/javascript"></script>
+<script src="js/routes.js" type="text/javascript"></script>
+</body>
+</html>
