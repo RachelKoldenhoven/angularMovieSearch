@@ -1,3 +1,19 @@
 <h1>Movie Results Show Here</h1>
 
 {{ message }}
+
+{{ view.searchResults }}
+
+<div class="container">
+    <div class="row">
+        <div class="results" ng-repeat="searchResult in view.searchResults">
+            {{ searchResult }}
+            <figure>
+                <img ng-src="{{movie.Poster}}">
+            </figure>
+            <p>{{ movie.Title }}</p>
+            <p>movies</p>
+
+        </div>
+    </div>
+</div>

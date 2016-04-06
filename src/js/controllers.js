@@ -5,41 +5,19 @@ app.controller('MovieController', ['$scope', "MovieSearchService", function($sco
   $scope.view = {};
   $scope.greeting = "Hello World!";
   $scope.message = "Views are working!";
+  $scope.view.searchResults = [];
 
 
   $scope.movieSearch = function(title) {
-    console.log(title);
     MovieSearchService.movieSearchResults(title).then(function(data) {
-      $scope.view.searchResults = data.data.Search;
+      var results = data.data.Search[0];
+      $scope.view.searchResults.push(results);
       console.log($scope.view.searchResults);
+      return $scope.view.searchResults;
+
     })
   }
 
 }]);
 
 
-
-//app.controller('PokemonController', ["$scope", "PokemonService", function($scope, PokemonService) {
-//  $scope.view = {};
-//  $scope.view.display = "";
-//  $scope.newPokemon = {};
-//  $scope.newMove = {};
-//
-//  $scope.getNewPokemon = function() {
-//    $scope.loading = true;
-//    PokemonService.generatePokemon().then(function(data){
-//      $scope.newPokemon = data.data;
-//      $scope.loading = false;
-//      console.log($scope.newPokemon);
-//    });
-//  };
-//
-//  $scope.getNewMove = function() {
-//    PokemonService.generateMove().then(function(data){
-//      $scope.newMove = data.data;
-//      console.log($scope.newMove.name);
-//    });
-//  };
-//
-//
-//}]);
